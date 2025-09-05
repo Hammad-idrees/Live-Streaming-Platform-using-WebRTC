@@ -161,40 +161,7 @@ FFMPEG_PATH=ffmpeg
 4. **Monitor analytics** and viewer engagement
 5. **Manage your content library**
 
-### For Administrators
 
-1. **Monitor platform activity** through admin dashboard
-2. **Manage user accounts** and permissions
-3. **Review reported content** and take action
-4. **Analyze platform metrics** and performance
-
-## 🔧 API Endpoints
-
-### Authentication
-
-- `POST /api/v1/auth/register` - User registration
-- `POST /api/v1/auth/login` - User login
-- `POST /api/v1/auth/refresh` - Refresh token
-- `POST /api/v1/auth/logout` - User logout
-
-### Streams
-
-- `GET /api/v1/streams` - Get all streams
-- `POST /api/v1/streams` - Create new stream
-- `GET /api/v1/streams/:id` - Get stream details
-- `PUT /api/v1/streams/:id` - Update stream
-- `DELETE /api/v1/streams/:id` - Delete stream
-
-### Users
-
-- `GET /api/v1/users/profile` - Get user profile
-- `PUT /api/v1/users/profile` - Update profile
-- `GET /api/v1/users/:id/follow` - Follow user
-- `DELETE /api/v1/users/:id/follow` - Unfollow user
-
-## 🏗️ Project Structure
-
-```
 streamvibe/
 ├── backend/
 │   ├── config/          # Configuration files
@@ -216,33 +183,6 @@ streamvibe/
 └── README.md
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **FFmpeg** for video processing capabilities
-- **Socket.io** for real-time communication
-- **React** team for the amazing framework
-- **Tailwind CSS** for the utility-first CSS framework
-- **MongoDB** for the flexible database solution
-
-## 📞 Support
-
-If you have any questions or need help, please:
-
-- Open an issue on GitHub
-- Contact us at support@streamvibe.com
-- Check our documentation at docs.streamvibe.com
 
 ---
 

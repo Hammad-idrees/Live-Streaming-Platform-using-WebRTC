@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-950 text-white font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-600 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-dark-500;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #1e293b;
+  }
+}
+
+@layer components {
+  /* Button variants */
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg active:transform active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-600 hover:bg-secondary-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg active:transform active:scale-95;
+  }
+
+  .btn-live {
+    @apply bg-gradient-live text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-glow hover:shadow-glow active:transform active:scale-95 animate-pulse-slow;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-dark-800 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 border border-dark-700 hover:border-dark-600;
+  }
+
+  /* Card variants */
+  .card {
+    @apply bg-dark-900 border border-dark-800 rounded-xl p-6 shadow-card-dark transition-all duration-200 hover:shadow-stream;
+  }
+
+  .card-stream {
+    @apply bg-dark-900 border border-dark-800 rounded-xl overflow-hidden shadow-card-dark transition-all duration-300 hover:shadow-stream hover:border-primary-600 group;
+  }
+
+  .card-glass {
+    @apply bg-dark-900/80 backdrop-blur-md border border-dark-700/50 rounded-xl p-6 shadow-card-dark;
+  }
+
+  /* Live indicator */
+  .live-indicator {
+    @apply inline-flex items-center gap-2 bg-live text-white px-3 py-1 rounded-full text-sm font-medium animate-live-pulse;
+  }
+
+  .live-dot {
+    @apply w-2 h-2 bg-white rounded-full animate-pulse;
+  }
+
+  /* Chat styles */
+  .chat-container {
+    @apply bg-chat-background border-l border-chat-border h-full flex flex-col;
+  }
+
+  .chat-message {
+    @apply p-3 hover:bg-dark-800/50 border-b border-chat-border/30 transition-colors duration-150;
+  }
+
+  .chat-input {
+    @apply bg-dark-800 border border-dark-700 rounded-lg px-4 py-2 text-white placeholder-dark-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+
+  /* Stream player styles */
+  .player-container {
+    @apply relative bg-black rounded-xl overflow-hidden shadow-stream;
+  }
+
+  .player-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none;
+  }
+
+  .player-controls {
+    @apply absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent;
+  }
+
+  /* Navigation styles */
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-dark-300 hover:text-white hover:bg-dark-800 transition-all duration-200 font-medium;
+  }
+
+  .nav-link.active {
+    @apply text-primary-400 bg-primary-900/20 border-r-2 border-primary-500;
+  }
+
+  /* Viewer count badge */
+  .viewer-count {
+    @apply inline-flex items-center gap-1 bg-dark-800/80 text-white px-3 py-1 rounded-full text-sm font-medium backdrop-blur-sm;
+  }
+
+  /* Category badge */
+  .category-badge {
+    @apply inline-block bg-primary-600/20 text-primary-300 px-3 py-1 rounded-full text-sm font-medium border border-primary-600/30;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    @apply animate-spin rounded-full border-2 border-dark-600 border-t-primary-500;
+  }
+
+  /* Status indicators */
+  .status-online {
+    @apply w-3 h-3 bg-success rounded-full;
+  }
+
+  .status-offline {
+    @apply w-3 h-3 bg-offline rounded-full;
+  }
+
+  .status-away {
+    @apply w-3 h-3 bg-warning rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    @apply shadow-glow;
+  }
+
+  .glow-purple {
+    @apply shadow-glow-purple;
+  }
+
+  /* Animation delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-500 { animation-delay: 500ms; }
+}
+
+/* Custom focus styles */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-dark-950;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}

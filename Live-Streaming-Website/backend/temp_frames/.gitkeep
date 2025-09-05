@@ -1,0 +1,2 @@
+# This file ensures the temp_frames directory is tracked by git
+# The actual temporary files are ignored by .gitignore

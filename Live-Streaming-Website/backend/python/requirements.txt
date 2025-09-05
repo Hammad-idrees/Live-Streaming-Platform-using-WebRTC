@@ -1,0 +1,4 @@
+# backend/python/requirements.txt
+ultralytics
+opencv-python
+numpy

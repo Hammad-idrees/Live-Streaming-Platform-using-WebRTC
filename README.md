@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![StreamVibe Logo](frontend/public/logo.png)
-
 **A comprehensive live streaming platform built with modern web technologies, featuring real-time video streaming, social interactions, and AI-powered content moderation.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
